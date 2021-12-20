@@ -541,13 +541,13 @@ void low_batt_alarm(void)
   else if ((bat_volts > NO_BAT) && (bat_volts < LOW_BATT_ALARM)) { // Battery is within the alarm voltage range
 	switch (alarm_state) {
       case off:
-	    low_batt_ms = millis();
-		alarm_state = low_batt;
+        low_batt_ms = millis();
+        alarm_state = low_batt;
         break;
 
       case low_batt:
 	    if ((millis() - low_batt_ms) > LOW_BATT_DELAY)
-		   alarm_state = on;
+          alarm_state = on;
         break;
 	 }
   }
