@@ -546,7 +546,7 @@ void low_batt_alarm(void)
         break;
 
       case low_batt:
-	    if ((millis() - low_batt_ms) > LOW_BATT_DELAY)
+        if ((millis() - low_batt_ms) > LOW_BATT_DELAY)
           alarm_state = on;
         break;
 	 }
