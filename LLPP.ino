@@ -539,7 +539,7 @@ void low_batt_alarm(void)
   if ((bat_volts < NO_BAT) || (bat_volts > LOW_BATT_ALARM)) // Battery disconnected or over trigger voltage immediately disables alarm
     alarm_state = off;
   else if ((bat_volts > NO_BAT) && (bat_volts < LOW_BATT_ALARM)) { // Battery is within the alarm voltage range
-	switch (alarm_state) {
+    switch (alarm_state) {
       case off:
         low_batt_ms = millis();
         alarm_state = low_batt;
